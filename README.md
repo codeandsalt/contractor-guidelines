@@ -24,11 +24,13 @@ That said, if a deadline or some other reason comes along which might cause you 
 
  If there is a design which comes along and you find that it doesn't map to approved styles, you should err toward approved styles. For example, if you receive a design where a "Heading 2" is normally used but the font doesn't quite match, then you should use Heading 2. If you find yourself doing this often, please let us know—generally this is just a minor oversight but shouldn't be happening.
 
-# Don't commit any unrelated to what you are working on.
+# Don't commit anything unrelated to what you are working on.
 
 It can be really tempting to fix a bug in a feature branch you are working on. Or sometimes, you might be working on a file and the formatting is off, so you fix it. Please, please do not do this. Doing this can cause issues down the road with mass updates or the bug being committed in another branch.
 
 Our goal is to review 100% of commits before they are merged in. Making those review diffs as small as possible really helps in this endeavor and works to eliminate conflicts later on down the line.
+
+Do: before you commit, review what you are committing. Using a tool like SourceTree or running `git commit -p` can give you terrific insights into what you are committing and help you make sure you're not committing anything accidentally.
 
 # Communicate your availability or lack thereof.
 
@@ -40,8 +42,8 @@ If it takes you 5 hours to do something which should have taken 30 minutes, we w
 
 # Build tests.
 
-If you're adding code, please build tests.
-If you're changing code, please change tests.
+If you're adding code, build new tests.
+If you're changing code, change existing tests.
 If you're fixing a bug and the tests are passing, write tests to make the bug fail, and then fix the bug.
 
 # Run test suites before committing.
