@@ -2,6 +2,11 @@
 
 This document provides a list of best practices and concepts for contractors.
 
+You should also review these:
+
+* [Coding Guidelines](coding-guidelines.md)
+* [Data Protection Policy](data-protection-policy)
+
 At a high level, it's important to remember that there are two sides to a freelance/contract relationship. One side is the contractor and the other, of course, the one hiring.
 
 In our relationships, we desire to assume the best from those we hire and as such you must know that each and every person matters to us. Yes, we talk in hours and tasks, but we take into considering the desire/need to work from you and factor that into how we plan and operate. Likewise, while we, as the contracting business, have final say over matters, we want you to input your thoughts and ideas into not only the work you do, but also into how we do things.
