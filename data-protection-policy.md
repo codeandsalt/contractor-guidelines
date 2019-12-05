@@ -18,3 +18,17 @@ Likewise, the Company agrees to:
 * Alert the contractor(s) to any changes or deviations from this agreement.
 * Inform the client of the above in order to ensure that they understand this agreement and assent to what it says.
 * Attempt to provide resources from the client which limit the exposure and liability of both the client and of the contractor to potential harm or breeches of confidential information.
+
+# Practice and Application
+
+Here are a number of recommendations for developers to keep their environments secure.
+
+1. Use full-disk encryption on your computers, especially laptops.
+2. Create and use SSH keys which are appropriate. (cf. https://paragonie.com/blog/2019/03/definitive-2019-guide-cryptographic-key-sizes-and-algorithm-recommendations)
+3. If you are operating mobile, use a VPN to encrypt your traffic.
+4. If you are using Windows, install Windows Defender and keep it updated.
+5. Use passphrases on your SSH keys.
+6. Never share your login with anyone. Always provide a login to them.
+7. Use a different password for every service.
+8. Use a password manager such as 1Password.
+9. If you have no need for a secret or data, delete it immediately.
