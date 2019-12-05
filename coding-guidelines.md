@@ -4,6 +4,77 @@ Usually you can set them to a preset and it should work, as we should be using s
 
 As a rule, though, unless your goal is to perform a mass-change in the code formatting (e.g. updating from PSR-1 to PSR-2) then **committing code which changes the formatting of unrelated items will be considered a bug.**
 
+Here are some particular rules that we enforce:
+
+## If statements should always include curly brackets
+
+    // Wrong.
+    if (something === true) return 'a';
+    
+    // Also wrong.
+    if (something === true)
+        return 'b';
+        
+    // Correct.
+    if (something === true) {
+        return 'c';
+    }
+
+## Use guard clauses and simplify your if/then/else logic.
+
+Lots of `if () {}` statements can really stack up and make everything hard to read. Consider this:
+
+    function determineIfUserMeetsCriteria() {
+        if (userIsLoggedIn === true) {
+            if (userHasSomeSomeAttribute) {
+                if (userHasAnotherParticularAttribute) {
+                    return true;
+                }   
+            }
+            else if (userHasAnotherAttribute) {
+                return true;
+            }
+        }
+        
+        return false;
+    }
+    
+In this case above, we can greatly simplify the readability.
+
+    function determineIfUserMeetsCriteria() {
+        // Guard #1.
+        if (userIsLoggedIn !== true) {
+            return false;
+        }
+       
+        // Rework logic #2. 
+        if ((userHasSomeSomeAttribute && userHasAnotherParticularAttribute)
+            || userHasAnotherAttribute) {
+            return true;
+        }
+        
+        return false;
+    }
+
+In #1, we see the guard clause actually simplifies the reading of the code. If the user is not logged in, we'll always return false. In #2, the `if/else if` structure can be simplified. Often your IDE can do this for you.
+
+The above is a contrived example, but it shows what the expectations are.
+
+# Simplify return statements
+
+    // This can be simplified...
+    function foo(bar) {
+        if (bar.baz === 'somevalue') {
+            return true;
+        }
+        return false;
+    }
+    
+    // To this...
+    function foo(bar) {
+        return bar.baz === 'somevalue';
+    }
+
 # Keep business logic/application functionality separate
 
 Going hand-in-hand with testability, controllers are windows into the logic of the application. Since we want the application to best testable, this means that business logic or application functionality should be abstracted from things like:
