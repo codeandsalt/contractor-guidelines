@@ -23,3 +23,14 @@ Here are some examples:
 * If you have a private method on the controller that isn't used anywhere else, add it to a Helper class.
 
 In general, you should be able to write tests for the majority of what you are doing without ever having to write a functional test. The only thing a functional test should generally look for is to make sure that response values are correct and shouldn't be testing business functionality.
+
+# Name your branches appropriately
+
+On our projects, each branch should follow this pattern:
+
+    CODE-ID-small-descriptive-phrase
+    
+For example, if you are working ticket PROJ-5 and that task is writing tests for an authentication system, you might name the branch:
+
+    PROJ-5-auth-system-tests
+
