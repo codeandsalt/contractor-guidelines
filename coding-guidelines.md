@@ -105,3 +105,10 @@ For example, if you are working ticket PROJ-5 and that task is writing tests for
 
     PROJ-5-auth-system-tests
 
+# Clean out your branches and stash every sprint (or periodically)
+
+This has a lot more to to do with keeping things neat and tidy. A lot of places will flush out branches with every sprint or release. And you should do that. But sometimes you have a feature that didn't quite make it in and you kept the branch. Or maybe it's a feature that you tried to work on but got stuck for one reason or another.
+
+My recommendation is that at the end of every sprint, you should delete *all* the branches, pull from master, and then start fresh. Also, clear out your `git stash`, too.
+
+This will cut out confusion and give you a clean environment to work in. Sort of like cleaning up your desk one a week (or two).
