@@ -37,6 +37,31 @@ Our goal is to review 100% of commits before they are merged in. Making those re
 
 Do: before you commit, review what you are committing. Using a tool like SourceTree or running `git commit -p` can give you terrific insights into what you are committing and help you make sure you're not committing anything accidentally.
 
+# Commit Messages should follow a pattern
+
+Commit messages describes should always start with the ticket ID:
+
+```
+TICKET-#### - A summary of the changes.
+
+Details about what was done.
+Added FooController.
+Updated BarService.
+Changed style for BazComponent.
+```
+
+Commit messages should describe what the commit does. If a single line does not suffice, then you should use additional lines after the first line to describe what changes were made and why. Every commit message should start with the ticket number.
+
+Additionally, a commit message is also an OK place to add notes about what you are doing. In general, if you're changing calling conventions or deprecating something, the code and tickets should also reflect those notes as well. But for code reviews, you might want to put some information in there about what you are doing and why:
+
+* Why are you reverting this change?
+* Is there a particular hack that might be important for others to know about?
+
+## Resources:
+
+* [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
+
+
 # Communicate your availability or lack thereof.
 
 If you have an emergency, need a break, or you have more time, please let us know. We plan things based on what we know and if that changes, then we can run into big problems!
